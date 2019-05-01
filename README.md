@@ -15,15 +15,15 @@ static showOSDialog(BuildContext context, String title, String message,
 ```
 
 ### Parameters
-- BuildContext context: the context where to build the widget
-- String title: the title of the alert
-- String message: the message displayed below the title
-- String firstButtonText: the title of the first action shown on the left
-- ActionStyle firstActionStyle: the style of the first button, as default is set to 'normal'
-- Function firstCallBack: the fuction to perform on the click on the first button
-- String secondButtonText: the title of the secondo action shown on the right
-- Function secondCallback: the fuction to perform on the click on the second button
-- ActionStyle secondActionStyle: the style of the second button, as default is set to 'normal'
+- BuildContext **context**: the context where to build the widget
+- String **title**: the title of the alert
+- String **message**: the message displayed below the title
+- String **firstButtonText**: the title of the first action shown on the left
+- ActionStyle **firstActionStyle**: the style of the first button, as default is set to 'normal'
+- Function **firstCallBack**: the fuction to perform on the click on the first button
+- String **secondButtonText**: the title of the secondo action shown on the right
+- Function **secondCallback**: the fuction to perform on the click on the second button
+- ActionStyle **secondActionStyle**: the style of the second button, as default is set to 'normal'
 
 ### ActionStyle:
 
