@@ -5,7 +5,7 @@ An util class to build effective OS native dialogs
 
 Call the function **showOSDialog** to display a native Alert dialogs according the user's OS.
 
-```
+```dart
 static showOSDialog(BuildContext context, String title, String message,
       String firstButtonText, Function firstCallBack,
       {ActionStyle firstActionStyle = ActionStyle.normal,
@@ -27,7 +27,7 @@ static showOSDialog(BuildContext context, String title, String message,
 
 ### ActionStyle:
 
-```
+```dart
 enum ActionStyle { normal, destructive, important, important_destructive }
 ```
 
@@ -39,7 +39,7 @@ enum ActionStyle { normal, destructive, important, important_destructive }
 ### Set the colors
 To change the colors of the button actions in the Dialogs class change the color of:
 
-```
+```dart
 static Color _normal = Colors.black;
 static Color _destructive = Colors.red;
 ```
