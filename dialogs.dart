@@ -1,11 +1,13 @@
 import 'dart:io';
-import 'package:broom/common/style/app_colors.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 enum ActionStyle { normal, destructive, important, important_destructive }
 
 class Dialogs {
+
+  static Color _normal = Colors.black;
+  static Color _destructive = Colors.red;
 
   /// show the OS Native dialog
   static showOSDialog(BuildContext context, String title, String message,
@@ -50,8 +52,8 @@ class Dialogs {
         style: TextStyle(
             color: (firstActionStyle == ActionStyle.important_destructive ||
                     firstActionStyle == ActionStyle.destructive)
-                ? AppColors.red
-                : AppColors.darkText,
+                ? _destructive
+                : _normal,
             fontWeight:
                 (firstActionStyle == ActionStyle.important_destructive ||
                         firstActionStyle == ActionStyle.important)
@@ -71,8 +73,8 @@ class Dialogs {
                 color:
                     (secondActionStyle == ActionStyle.important_destructive ||
                             firstActionStyle == ActionStyle.destructive)
-                        ? AppColors.red
-                        : AppColors.darkText)),
+                        ? _destructive
+                        : _normal)),
         onPressed: () {
           Navigator.of(context).pop();
           secondCallback();
@@ -103,8 +105,8 @@ class Dialogs {
             style: TextStyle(
             color: (firstActionStyle == ActionStyle.important_destructive ||
                     firstActionStyle == ActionStyle.destructive)
-                ? AppColors.red
-                : AppColors.darkText,
+                ? _destructive
+                : _normal,
             fontWeight:
                 (firstActionStyle == ActionStyle.important_destructive ||
                         firstActionStyle == ActionStyle.important)
@@ -126,8 +128,8 @@ class Dialogs {
               style: TextStyle(
             color: (secondActionStyle == ActionStyle.important_destructive ||
                     secondActionStyle == ActionStyle.destructive)
-                ? AppColors.red
-                : AppColors.darkText,
+                ? _destructive
+                : _normal,
             fontWeight:
                 (secondActionStyle == ActionStyle.important_destructive ||
                         secondActionStyle == ActionStyle.important)
